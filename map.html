@@ -43,61 +43,6 @@
 	  }
 	</style>
 	<!-- <script src="scale.raphael.js"></script> -->
-	
-	<script>
-	$(document).ready(function() {
-	  $('#map').usmap({
-	    //'stateSpecificStyles': {
-	      //'AK' : {fill: '#ff0'}*
-	    //},
-	    //'stateSpecificHoverStyles': {
-	      //'HI' : {fill: '#ff0'}
-	    //},
-	    
-	    'mouseoverState': {
-	       'HI' : function(event, data) {
-	        //return false;
-	      }
-	    },
-	    
-	    
-	    'click' : function(event, data) {
-	      $('#alert')
-	        .text(''+data.name+': Amount of Energy Produced: Amount of Money Saved:')
-	        .stop()
-	        .css('backgroundColor', '#ff0')
-	        .animate({backgroundColor: '#ddd'}, 1000);
-	    }
-	  });
-	  
-	  $('#map2').usmap({
-	    'stateStyles': {
-	      fill: '#025', 
-	      "stroke-width": 1,
-	      'stroke' : '#036'
-	    },
-	    'stateHoverStyles': {
-	      fill: 'teal'
-	    },
-	    
-	    'click' : function(event, data) {
-	      $('#alert')
-	        .text('Click '+data.name+' on map 2')
-	        .stop()
-	        .css('backgroundColor', '#af0')
-	        .animate({backgroundColor: '#ddd'}, 1000);
-	    }
-	  });
-	  
-	  $('#over-md').click(function(event){
-	    $('#map').usmap('trigger', 'MD', 'mouseover', event);
-	  });
-	  
-	  $('#out-md').click(function(event){
-	    $('#map').usmap('trigger', 'MD', 'mouseout', event);
-	  });
-	});
-	</script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -158,15 +103,9 @@
   <div id="headerimg">
       <img src="img/fedex.jpg" class="solar" />
   </div>
-  <div role="main" id="main">
-      <div id="title" style="text-align: center; font-family: 'Raleway', sans-serif;"><h1>CenterStar Energy Service Productivity Map</h1></div>
-   
-  <div id="alert" style="text-align: center;">Click on a State to View Production/Savings</div>
-  
-  <div id="map" style="width: 930px; height: 630px; margin: auto; font-family: 'Raleway', sans-serif;"></div>
-  </div>
   <div id="map">
-  <iframe src="https://www.google.com/maps/d/embed?mid=10J8gd3oNSKkc9P-kXj3xSo3sP18" width="640" height="480"></iframe>
+       <div id="title" style="text-align: center; font-family: 'Raleway', sans-serif;"><h1>CenterStar Energy Service Project Map</h1></div>
+  <iframe src="https://www.google.com/maps/d/embed?mid=10J8gd3oNSKkc9P-kXj3xSo3sP18" width="1200" height="840" style="margin: auto; display:block;"></iframe>
   </div>
   <footer>
 

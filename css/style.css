@@ -195,7 +195,6 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto; vertical-align: top; resize: vertical; }
 
 /* Colors for form validity */
-input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 
@@ -299,6 +298,16 @@ td { vertical-align: top; }
     position: relative;
     clear: both;
     top: 500px;
+}
+
+#map {
+  width: 100%;
+  background-color: #fff;
+    display: block;
+    position: relative;
+    margin-top: 30%;
+    padding-top: 2%;
+    padding-bottom: 25%;
 }
 
 
